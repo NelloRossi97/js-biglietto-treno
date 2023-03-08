@@ -17,12 +17,8 @@ const eta = parseInt(prompt("Inserire l'eta (sono ammessi solo numeri)"));
 const prezzoBiglietto = km * 0.21;
 
 //variabili sconto
-const scontoMin = 0.20;
-const scontoOver = 0.40;
-
-//varabili sconto applicato
-let scontoMinApplicato;
-let scontoOverApplicato;
+const scontoMin = prezzoBiglietto * 0.20;
+const scontoOver = prezzoBiglietto* 0.40;
 
 //variabile prezzo totale
 let prezzoTotale;
@@ -33,15 +29,15 @@ if(isNaN(eta) || isNaN(km)){
     <h1 class="text-danger fw-bold"> Inserire dati validi (solo numeri). </h1>
     `;
 } else if (eta < 18) {
-    scontoMinApplicato = prezzoBiglietto * scontoMin,
-    prezzoTotale = prezzoBiglietto - scontoMinApplicato,
+    // scontoMinApplicato = prezzoBiglietto * scontoMin,
+    prezzoTotale = prezzoBiglietto - scontoMin,
     document.getElementById('app').innerHTML += 
     `
     <p class="text-white fw-bold text-center fs-1">${prezzoTotale}&euro;<p>
     `;
 } else if (eta > 64) {
-    scontoOverApplicato = prezzoBiglietto * scontoOver,
-    prezzoTotale = prezzoBiglietto - scontoOverApplicato,
+    // scontoOverApplicato = prezzoBiglietto * scontoOver,
+    prezzoTotale = prezzoBiglietto - scontoOver,
     document.getElementById('app').innerHTML += 
     `
     <p class="text-white fw-bold text-center fs-1">${prezzoTotale}&euro;<p>
