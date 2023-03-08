@@ -1,0 +1,31 @@
+:root{
+    --eo-primary: #AB05F2;
+    --eo-secondary: #36D99D;
+    --eo-neutral: #F2F2F2;
+    --eo-dark: #262626;
+}
+
+body{
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: var(--eo-dark);
+}
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 4px;  
+}
+
+.container{
+    height: 100vh;
+}
+.border-gradient-app{
+    border-image-source: linear-gradient(to right, #36D99D, #FFFFFF);
+}
+
+.title-gradient{
+    background-color: red;
+    background-image: linear-gradient(to right, #36D99D,#F2F2F2, #AB05F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: -0.65rem;
+}
